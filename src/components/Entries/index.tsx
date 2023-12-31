@@ -1,14 +1,14 @@
-import { Entry as EntryType } from '../../types';
-import Entry from '../Entry';
+import { Entry } from '../../types';
+import EntryDetails from '../EntryDetails';
 
-type Props = { entries: EntryType[] };
+type Props = { entries: Entry[] };
 
 const Entries = ({ entries }: Props) => {
   return (
     <section>
       {entries.length > 0 && <h3>Entries</h3>}
       {entries.map((entry) => (
-        <Entry key={entry.id} entry={entry} />
+        <EntryDetails key={entry.id} entry={entry} />
       ))}
     </section>
   );

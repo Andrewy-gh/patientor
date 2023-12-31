@@ -1,8 +1,8 @@
 import { Entry } from '../../types';
 
-type Props = { entry: Entry; children: React.ReactNode };
+type Props = { entry: Entry };
 
-const BaseEntry = ({ entry, children }: Props) => {
+const BaseEntry = ({ entry }: Props) => {
   return (
     <div>
       <div>Description: {entry.description}</div>
@@ -14,7 +14,6 @@ const BaseEntry = ({ entry, children }: Props) => {
             <div key={index}>{code}</div>
           ))}
       </div>
-      {children}
     </div>
   );
 };
